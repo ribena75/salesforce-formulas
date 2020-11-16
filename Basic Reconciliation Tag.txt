@@ -1,13 +1,10 @@
 IF((causeview__Gift__c.causeview__Recurring_Donation__c.Annual_Value__c > 4999),
 "Major Gift - Regular",
-
 IF(
 AND(
 CONTAINS(causeview__Gift__c.causeview__Recurring_Donation__c.Annual_Value__c < 5000),
 CONTAINS(causeview__Gift__c.causeview__Recurring_Donation__c.Annual_Value__c > 499),
 "Medium Gift - Regular", 
-
-
 IF(causeview__Gift__c.causeview__Recurring_Donation__c.Annual_Value__c < 500),
 "Small Gift - Regular"
 )))
