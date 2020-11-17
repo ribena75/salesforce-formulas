@@ -1,5 +1,4 @@
 IF
-(TEXT(CurrencyIsoCode)= 'GBP',"UK Main List",
+(TEXT(CurrencyIsoCode)= 'GBP',"UK Main List"),
 IF
-(TEXT(CurrencyIsoCode)= 'USD',"US Main List"
-)
+(TEXT(CurrencyIsoCode)= 'USD',"US Main List")
