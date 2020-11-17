@@ -1,4 +1,2 @@
-IF
-(TEXT(CurrencyIsoCode)= 'GBP',"UK Main List"),
-IF
-(TEXT(CurrencyIsoCode)= 'USD',"US Main List")
+IF(CONTAINS(TEXT(CurrencyIsoCode),"GBP"),"UK Main List",
+IF(CONTAINS(TEXT(CurrencyIsoCode),"USD"),"US Main List")))
