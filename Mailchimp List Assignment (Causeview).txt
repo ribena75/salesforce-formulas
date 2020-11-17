@@ -1,8 +1,2 @@
-IF(
- OR(
-  ISPICKVAL(CurrencyIsoCode, "GBP"),
-  ISPICKVAL(CurrencyIsoCode, "USD")
-  ),
- "UK Main List",
- "US Main List"
-)
+IF(ISPICKVAL( CurrencyIsoCode , "GBP"), "UK Main List",  
+IF(ISPICKVAL( CurrencyIsoCode , "USD"), "US Main List", NULL))
