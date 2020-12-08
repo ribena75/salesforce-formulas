@@ -11,4 +11,4 @@ CONTAINS(causeview__Recurring_Donation__c.Annual_Value__c >= 500),
 IF(
 CONTAINS(causeview__Recurring_Donation__c.Annual_Value__c < 500),
 "Small Gift - Regular"
-)))
+))))
