@@ -1,4 +1,4 @@
-CASE(MONTH(DATEVALUE(cpm__Due_Date__c)),
+CASE(MONTH(DATEVALUE( Allocation_Date__c )),
     3, 'Q1',
     4, 'Q1',
     5, 'Q1',
