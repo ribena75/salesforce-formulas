@@ -1,1 +1,1 @@
-TEXT(YEAR(theDateField))
+TEXT(YEAR( causeview__Date__c ))
