@@ -1,1 +1,1 @@
-TEXT(YEAR( causeview__Allocation_Date__c ))
+TEXT(YEAR( Allocation_Date__c ))
