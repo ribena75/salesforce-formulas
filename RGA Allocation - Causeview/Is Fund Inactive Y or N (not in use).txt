@@ -1,0 +1,1 @@
+IF(Is_Fund_Inactive__c = TRUE, "Y", "N")
