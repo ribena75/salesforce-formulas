@@ -37,6 +37,7 @@ ISPICKVAL(causeview__Payment__r.causeview__Payment_Type__c,"Global Giving")),
 IF(
 OR(
 CONTAINS(causeview__New_Campaign__r.Parent.Name,"Digital"),
+CONTAINS(causeview__New_Campaign__r.Parent.Name,"Facebook"),
 CONTAINS(causeview__New_Campaign__r.Name,"Facebook")),
 "Digital",
 "N/A")))))))),
