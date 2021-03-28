@@ -1,0 +1,93 @@
+IF(
+ISBLANK(causeview__Gift__r.causeview__Constituent__c),
+IF(
+OR(
+INCLUDES(causeview__Gift__r.causeview__Organization__r.causeview__Constituent_Codes__c,"Major Donor Trust"),
+INCLUDES(causeview__Gift__r.causeview__Organization__r.causeview__Constituent_Codes__c,"Major Donors")),
+"Major Donors",
+IF(
+OR(
+INCLUDES(causeview__Gift__r.causeview__Organization__r.causeview__Constituent_Codes__c,"Community Group"),
+INCLUDES(causeview__Gift__r.causeview__Organization__r.causeview__Constituent_Codes__c,"Religious Group"),
+CONTAINS(causeview__New_Campaign__r.Parent.Name,"Community")),
+"Community",
+IF(
+CONTAINS(causeview__New_Campaign__r.Parent.Name,"Challenge"),
+"Challenge Events",
+IF(
+causeview__Gift__r.causeview__Organization__r.Name = "Away",
+"Away",
+IF(
+causeview__Gift__r.causeview__Organization__r.RecordTypeId = "0120X000000sdnZ",
+"Grant-Making Bodies",
+IF(
+OR(
+INCLUDES(causeview__Gift__r.causeview__Organization__r.causeview__Constituent_Codes__c,"Corporate Donor"),
+CONTAINS(causeview__New_Campaign__r.Parent.Name,"Corporate")),
+"Corporate",
+IF(
+OR(
+CONTAINS(causeview__New_Campaign__r.Name,"Appeal"),
+CONTAINS(causeview__New_Campaign__r.Name,"Newsletter"),
+CONTAINS(causeview__New_Campaign__r.Name,"Inserts"),
+CONTAINS(causeview__New_Campaign__r.Parent.Name,"Inserts"),
+ISPICKVAL(causeview__Payment__r.causeview__Payment_Type__c,"Big Give"),
+ISPICKVAL(causeview__Payment__r.causeview__Payment_Type__c,"Global Giving")),
+"Appeals",
+IF(
+OR(
+CONTAINS(causeview__New_Campaign__r.Parent.Name,"Digital"),
+CONTAINS(causeview__New_Campaign__r.Name,"Facebook")),
+"Digital",
+"N/A")))))))),
+
+IF(
+CONTAINS(causeview__New_Campaign__r.Name,"Legacies"),
+"Legacies",
+IF(
+OR(
+INCLUDES(causeview__Gift__r.causeview__Constituent__r.causeview__Constituent_Codes__c,"Major Donor"),
+INCLUDES(causeview__Gift__r.causeview__Constituent__r.causeview__Constituent_Codes__c,"Patron"),
+CONTAINS(causeview__New_Campaign__r.Name,"Sustainer"),
+CONTAINS(causeview__New_Campaign__r.Name,"Major Donor")),
+"Major Donors",
+IF(
+NOT(ISBLANK(causeview__Gift__r.causeview__Recurring_Donation__c)),
+"Recurring",
+IF(
+OR(
+CONTAINS(causeview__New_Campaign__r.Parent.Name,"Challenge"),
+CONTAINS(causeview__New_Campaign__r.Name,"Challenge")),
+"Challenge Events",
+IF(
+OR(
+ISPICKVAL(causeview__Payment__r.causeview__Payment_Type__c,"Eventbrite"),
+CONTAINS(causeview__New_Campaign__r.Name,"Event")),
+"Events",
+IF(
+OR(
+CONTAINS(causeview__New_Campaign__r.Parent.Name,"Community"),
+CONTAINS(causeview__New_Campaign__r.Name,"Community")),
+"Community",
+IF(
+OR(
+CONTAINS(causeview__New_Campaign__r.Name,"Appeal"),
+CONTAINS(causeview__New_Campaign__r.Name,"Newsletter"),
+CONTAINS(causeview__New_Campaign__r.Name,"Inserts"),
+CONTAINS(causeview__New_Campaign__r.Parent.Name,"Inserts"),
+ISPICKVAL(causeview__Payment__r.causeview__Payment_Type__c,"Big Give"),
+ISPICKVAL(causeview__Payment__r.causeview__Payment_Type__c,"Global Giving")),
+"Appeals",
+IF(
+OR(
+CONTAINS(causeview__New_Campaign__r.Parent.Name,"Digital"),
+CONTAINS(causeview__New_Campaign__r.Name,"Facebook"),
+ISPICKVAL(causeview__Payment__r.causeview__Payment_Type__c,"Credit Card")),
+"Digital",
+IF(
+OR(
+CONTAINS(causeview__New_Campaign__r.Name,"Unsolicited"),
+causeview__New_Campaign__r.Name = "Unknown",
+causeview__New_Campaign__r.Name = "General"),
+"Unsolicited",
+"N/A"))))))))))
