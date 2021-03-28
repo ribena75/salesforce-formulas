@@ -1,0 +1,1 @@
+IF(npo02__FirstCloseDate__c = npo02__LastCloseDate__c, 'True', 'False')
