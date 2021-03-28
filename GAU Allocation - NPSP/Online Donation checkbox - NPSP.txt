@@ -1,6 +1,5 @@
 IF(
 OR(
-causeview__Campaign__r.Count_as_online_giving__c = TRUE,
 ISPICKVAL( Payment__r.cpm__Payment_Method__c , "Big Give"),
 ISPICKVAL( Payment__r.cpm__Payment_Method__c , "Credit Card"),
 ISPICKVAL( Payment__r.cpm__Payment_Method__c , "Eventbrite"),
