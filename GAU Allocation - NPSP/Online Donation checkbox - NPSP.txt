@@ -1,0 +1,15 @@
+IF(
+OR(
+causeview__Campaign__r.Count_as_online_giving__c = TRUE,
+ISPICKVAL( causeview__Payment__r.causeview__Payment_Type__c , "Big Give"),
+ISPICKVAL( causeview__Payment__r.causeview__Payment_Type__c , "Credit Card"),
+ISPICKVAL( causeview__Payment__r.causeview__Payment_Type__c , "Eventbrite"),
+ISPICKVAL( causeview__Payment__r.causeview__Payment_Type__c , "Global Giving"),
+ISPICKVAL( causeview__Payment__r.causeview__Payment_Type__c , "JustGiving"),
+ISPICKVAL( causeview__Payment__r.causeview__Payment_Type__c , "Paypal"),
+ISPICKVAL( causeview__Payment__r.causeview__Payment_Type__c , "Worldpay"),
+ISPICKVAL( causeview__Payment__r.causeview__Payment_Type__c , "Facebook"),
+ISPICKVAL( causeview__Payment__r.causeview__Payment_Type__c , "Instagram"),
+ISPICKVAL( causeview__Payment__r.causeview__Payment_Type__c , "Stripe")),
+True,
+False)
