@@ -1,5 +1,5 @@
 If(
-Or(causeview__Deceased__c = True,
+Or(npsp__Deceased__c = True,
 Includes(Global_Communication_Preferences__c, "Forget me"),
 Includes(Global_Communication_Preferences__c, "Do not contact"),
 Includes(Global_Communication_Preferences__c, "Do not ask for money")),
