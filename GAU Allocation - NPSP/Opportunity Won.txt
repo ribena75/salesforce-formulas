@@ -1,0 +1,1 @@
+(npsp__Opportunity__r.IsClosed = TRUE)

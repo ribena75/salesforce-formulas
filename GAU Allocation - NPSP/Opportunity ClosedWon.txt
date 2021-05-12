@@ -1,3 +1,0 @@
-AND(
-npsp__Opportunity__r.IsClosed = FALSE,
-npsp__Opportunity__r.IsWon = TRUE)
