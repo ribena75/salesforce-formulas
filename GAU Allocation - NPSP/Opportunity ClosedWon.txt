@@ -1,0 +1,3 @@
+AND(
+IsClosed = FALSE,
+IsWon = TRUE)
