@@ -1,0 +1,9 @@
+IF( 
+ISBLANK(npe03__Recurring_Donation__c), 
+TRUE, 
+IF( 
+NOT(ISBLANK(npe03__Recurring_Donation__c), 
+FALSE, 
+TRUE 
+) 
+)
