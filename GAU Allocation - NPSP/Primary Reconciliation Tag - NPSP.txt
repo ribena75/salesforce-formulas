@@ -1,5 +1,5 @@
 IF (AND(npsp__Amount__c > 0, npsp__Amount__c < 500), "Small Gift - Single",
 IF (AND(npsp__Amount__c >= 500, npsp__Amount__c < 5000), "Medium Gift - Single",
-IF (npsp__Amount__c >= 5000, "Major Gift - Single",
-IF (npsp__Opportunity__r.Account.RecordType.Id = "0120X000000sdnZQAQ", "Grant"
-)))))
+IF (npsp__Amount__c >= 5000), "Major Gift - Single",
+IF (npsp__Opportunity__r.Account.RecordType.Id = "0120X000000sdnZQAQ"), "Grant"
+))))
