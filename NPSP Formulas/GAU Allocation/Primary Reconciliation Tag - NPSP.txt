@@ -1,51 +1,35 @@
 IF(
 
-    AND(
-            npsp__Amount__c > 0,
-            npsp__Amount__c < 500
+   ISBLANK(npe03__Recurring_Donation__c),
+   IF(
+     AND(
+         npsp__Amount__c > 0,
+         npsp__Amount__c < 500
       ),"Small Gift - Single",
-
-IF(
-
-    AND(
-             npsp__Opportunity__r.npe03__Recurring_Donation__c = "TRUE",
-             npsp__Recurring_Donation__r.Annual_Value__c > 0,
-             npsp__Recurring_Donation__r.Annual_Value__c  < 500
-     ),"Small Gift - Regular",
-	 
-IF(
-
-    AND(
+     IF(
+         AND(
             npsp__Amount__c >= 500,
             npsp__Amount__c < 5000
-      ),"Medium Gift - Single",
+        ),"Medium Gift - Single",
+     IF(
+        npsp__Amount__c > 5000,
+       "Major Gift - Single",
+       IF(
+          NOT(ISBLANK(npe03__Recurring_Donation__c)),
+           IF(
+              AND(  
+                  npsp__Recurring_Donation__r.Annual_Value__c > 0,
+                  npsp__Recurring_Donation__r.Annual_Value__c  < 500
+             ),"Small Gift - Regular",
 
+           IF(
+              AND(
+                   npsp__Recurring_Donation__r.Annual_Value__c >= 500,
+                   npsp__Recurring_Donation__r.Annual_Value__c  < 5000
+              ),"Medium Gift - Regular",
+             IF(
+                npsp__Recurring_Donation__r.Annual_Value__c > 5000, "Major Gift - Regular",
 IF(
+CONTAINS(npsp__Opportunity__r.RecordType.Name,"Grant"),"Grant","N/A"
 
-    AND(
-             npsp__Opportunity__r.npe03__Recurring_Donation__c = "TRUE",
-             npsp__Recurring_Donation__r.Annual_Value__c >= 500,
-             npsp__Recurring_Donation__r.Annual_Value__c  < 5000
-     ),"Medium Gift - Regular",
-	 
-IF(
-
-             npsp__Amount__c > 5000
-      ),"Major Gift - Single",
-
-IF(
-
-    AND(
-             npsp__Opportunity__r.npe03__Recurring_Donation__c = "TRUE",
-             npsp__Recurring_Donation__r.Annual_Value__c > 5000
-     ),"Major Gift - Regular",
-	 
-	 
-IF(
-
-    CONTAINS(npsp__Opportunity__r.RecordType.Name,”Grant”)
-	),"Grant"
-
-)
-
-)
+)))))))))
