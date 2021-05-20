@@ -1,35 +1,22 @@
 IF(
-
-   ISBLANK(npsp__Opportunity__r.npe03__Recurring_Donation__c),
-   IF(
-     AND(
-         npsp__Amount__c > 0,
-         npsp__Amount__c < 500
-      ),"Small Gift - Single",
-     IF(
-         AND(
-            npsp__Amount__c >= 500,
-            npsp__Amount__c < 5000
-        ),"Medium Gift - Single",
-     IF(
-        npsp__Amount__c > 5000,
-       "Major Gift - Single",
-       IF(
-          NOT(ISBLANK(npsp__Opportunity__r.npe03__Recurring_Donation__c)),
-           IF(
-              AND(  
-                  npsp__Opportunity__r.npe03__Recurring_Donation__r.Annual_Value__c > 0,
-                  npsp__Opportunity__r.npe03__Recurring_Donation__r.Annual_Value__c  < 500
-             ),"Small Gift - Regular",
-
-           IF(
-              AND(
-                   npsp__Opportunity__r.npe03__Recurring_Donation__r.Annual_Value__c >= 500,
-                   npsp__Opportunity__r.npe03__Recurring_Donation__r.Annual_Value__c  < 5000
-              ),"Medium Gift - Regular",
+      ISBLANK(npsp__Opportunity__r.npe03__Recurring_Donation__c),
+      If(
+         AND(npsp__Amount__c  > 0,npsp__Amount__c  < 500),"Small Gift - Single",
+         IF(
+             AND(npsp__Amount__c  >= 500,npsp__Amount__c  < 5000),"Medium Gift - Single",
              IF(
-                npsp__Opportunity__r.npe03__Recurring_Donation__r.Annual_Value__c > 5000, "Major Gift - Regular",
-IF(
-CONTAINS(npsp__Opportunity__r.RecordType.Name,"Grant"),"Grant","N/A"
-
-)))))))))
+                npsp__Amount__c  > 5000,"Major Gift - Single",
+                IF(
+                  CONTAINS(npsp__Opportunity__r.RecordType.Name,"Grant"),"Grant","N/A"
+               )
+             )
+         )
+      ),
+      IF(
+         AND( npsp__Opportunity__r.npe03__Recurring_Donation__r.Annual_Value__c > 0,npsp__Opportunity__r.npe03__Recurring_Donation__r.Annual_Value__c  < 500),"Small Gift - Regular",
+         IF(
+            AND(npsp__Opportunity__r.npe03__Recurring_Donation__r.Annual_Value__c >= 500,npsp__Opportunity__r.npe03__Recurring_Donation__r.Annual_Value__c  < 5000),"Medium Gift - Regular",
+               IF(npsp__Opportunity__r.npe03__Recurring_Donation__r.Annual_Value__c > 5000, "Major Gift - Regular","N/A")
+         )
+      )
+)
