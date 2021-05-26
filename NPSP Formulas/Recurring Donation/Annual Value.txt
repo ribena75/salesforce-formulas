@@ -1,3 +1,6 @@
-IF( TEXT(npe03__Installment_Period__c) = "Monthly", npe03__Installment_Amount__c * 12,
-IF( TEXT(npe03__Installment_Period__c) = "Quaterly", npe03__Installment_Amount__c * 4,
-IF( TEXT(npe03__Installment_Period__c) = "Yearly", npe03__Installment_Amount__c, 0)))
+Case( Text(npe03__Installment_Period__c),
+    "Monthly",npe03__Installment_Amount__c * 12,
+    "Quaterly",npe03__Installment_Amount__c * 4,
+    "Yearly",npe03__Installment_Amount__c,
+    0
+)
