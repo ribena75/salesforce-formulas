@@ -1,3 +1,6 @@
+SYNTAX ERROR
+---
+
 Case( Text(npe03__Installment_Period__c),
     "Monthly",npe03__Installment_Amount__c * 12,
     "Quarterly",npe03__Installment_Amount__c * 4,
