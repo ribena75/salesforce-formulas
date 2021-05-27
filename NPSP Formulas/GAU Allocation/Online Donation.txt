@@ -1,7 +1,7 @@
 IF(
 OR(
 ISPICKVAL( Payment__r.cpm__Payment_Method__c , "Big Give"),
-ISPICKVAL( Payment__r.cpm__Payment_Method__c , "Credit Card"),
+ISPICKVAL( Payment__r.cpm__Payment_Method__c , "CreditCard"),
 ISPICKVAL( Payment__r.cpm__Payment_Method__c , "Eventbrite"),
 ISPICKVAL( Payment__r.cpm__Payment_Method__c , "Global Giving"),
 ISPICKVAL( Payment__r.cpm__Payment_Method__c , "JustGiving"),
