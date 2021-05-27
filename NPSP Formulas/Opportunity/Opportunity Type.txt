@@ -1,9 +1,0 @@
-IF( 
-ISBLANK( npe03__Recurring_Donation__c ), 
-"Single", 
-IF( 
-NOT(ISBLANK( npe03__Recurring_Donation__c )), 
-"Recurring", 
-"Single" 
-) 
-)
