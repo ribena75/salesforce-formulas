@@ -1,1 +1,0 @@
-IF(NOT ISBLANK( npsp__Recurring_Donation__c ),True,False)
