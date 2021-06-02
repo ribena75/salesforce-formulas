@@ -1,4 +1,6 @@
 IF(
+CONTAINS(npsp__Opportunity__r.RecordType.Name,"Grant"),"Grant",
+IF(
 ISBLANK(npsp__Opportunity__r.npe03__Recurring_Donation__c),
 IF(
 AND(
@@ -13,9 +15,7 @@ npsp__Amount__c < 5000
 IF(
 npsp__Amount__c >= 5000,
 "Major Gift - Single",
-IF(
-CONTAINS(npsp__Opportunity__r.RecordType.Name,"Grant"),"Grant","n/a"
-)
+"n/a"
 )
 )
 ) ,
@@ -32,6 +32,7 @@ npsp__Opportunity__r.npe03__Recurring_Donation__r.Annual_Value__c < 5000
 IF(
 npsp__Opportunity__r.npe03__Recurring_Donation__r.Annual_Value__c >= 5000,
 "Major Gift - Regular","n/a"
+)
 )
 )
 )
