@@ -1,0 +1,1 @@
+IF( MONTH( cpm__Due_Date__c ) >= 10, TEXT(YEAR(cpm__Due_Date__c)) & '-Q4', IF(MONTH( cpm__Due_Date__c ) >= 7, TEXT(YEAR(cpm__Due_Date__c)) & '-Q3', IF(MONTH( cpm__Due_Date__c ) >= 4, TEXT(YEAR(cpm__Due_Date__c)) & '-Q2', TEXT(YEAR(cpm__Due_Date__c)) & '-Q1')))
