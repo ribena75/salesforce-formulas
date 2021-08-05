@@ -1,3 +1,5 @@
+AND( CurrencyIsoCode , "GBP")
+
 NOT(
 
 OR(
