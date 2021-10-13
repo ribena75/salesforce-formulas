@@ -11,6 +11,7 @@ Isblank(MailingPostalCode) = False,
 Or(
 MailingCountry = "UK",
 MailingCountry = "United Kingdom",
+MailingCountry = "GB",
 Isblank(MailingCountry) = True)),
 If(
 And(
