@@ -2,7 +2,7 @@ If(
 Or(npsp__Deceased__c = True,
 Includes(Global_Communication_Preferences__c, "Forget me"),
 Includes(Global_Communication_Preferences__c, "Do not contact"),
-Includes(Global_Communication_Preferences__c, "Do not ask for money")),
+Includes(Solicit_Codes__c, "Do not ask for money")),
 "Neither Print nor Email",
 If(
 And(
