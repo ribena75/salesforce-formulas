@@ -12,6 +12,7 @@ Or(
 MailingCountry = "UK",
 MailingCountry = "United Kingdom",
 MailingCountry = "GB",
+MailingCountry = "GBR",
 Isblank(MailingCountry) = True)),
 If(
 And(
