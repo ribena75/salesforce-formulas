@@ -1,1 +1,1 @@
-MC4SF__MC_Subscriber__r.CreatedDate -  npo02__FirstCloseDate__c
+(npo02__FirstCloseDate__c - DATEVALUE(MC4SF__MC_Subscriber__r.CreatedDate))
