@@ -1,1 +1,1 @@
-TEXT(MC4SF__MC_Subscriber__r.CreatedDate -  npo02__FirstCloseDate__c)
+MC4SF__MC_Subscriber__r.CreatedDate -  npo02__FirstCloseDate__c
