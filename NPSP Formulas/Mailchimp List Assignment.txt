@@ -1,2 +1,1 @@
-IF(ISPICKVAL( CurrencyIsoCode , "GBP"), "UK Main List",  
-IF(ISPICKVAL( CurrencyIsoCode , "USD"), "US Main List", NULL))
+IF(ISPICKVAL( CurrencyIsoCode , "USD"), "USD Donor", NULL))
