@@ -1,0 +1,22 @@
+AND(
+
+         [Opportunity].RecordType.DeveloperName = "Donation",
+         ISPICKVAL([Opportunity].StageName,"Posted"),
+         ISPICKVAL([Opportunity].CurrencyIsoCode,"GBP - British Pound"),
+         NOT(ISBLANK([Opportunity].npsp__Primary_Contact__c)),
+         [Opportunity].npsp__Primary_Contact__r.Not_eligible_for_Gift_Aid__c = FALSE,
+
+        OR(
+              AND(
+                       [Opportunity].npsp__Primary_Contact__r.Has_Active_GAD__c = FALSE,
+                       [Opportunity].IsRecurringDonation__c = FALSE
+               ),
+              AND(
+                       [Opportunity].npsp__Primary_Contact__r.Has_Active_GAD__c = FALSE,
+                       [Opportunity].IsRecurringDonation__c = TRUE,
+                       [Opportunity].npe03__Recurring_Donation__r.npe03__Total_Paid_Installments__c = 1
+
+                )
+
+          )
+)
