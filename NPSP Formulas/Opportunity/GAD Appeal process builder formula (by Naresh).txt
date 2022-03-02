@@ -5,6 +5,18 @@ AND(
          ISPICKVAL([Opportunity].CurrencyIsoCode,"GBP"),
          NOT(ISBLANK([Opportunity].npsp__Primary_Contact__c)),
          [Opportunity].npsp__Primary_Contact__r.Not_eligible_for_Gift_Aid__c = FALSE,
+		 [Opportunity].npsp__Primary_Contact__r.npsp__Deceased__c,
+         NOT(INCLUDES([Opportunity].npsp__Primary_Contact__r.Solicit_Codes__c   , "Do Not Contact")),
+		 NOT(INCLUDES([Opportunity].npsp__Primary_Contact__r.Global_Communication_Preferences__c , "Do Not Contact")),
+		 
+		 CASE([Opportunity].npsp4hub__Payment_Method__c ,
+                   "CAF",1,
+                   "CAF Regular",1,
+                   "CAF Voucher",1,
+                   "CAF Card",1,
+                   "CAF GAYE",1,
+                    0
+         ) = 0,
 
         OR(
               AND(
