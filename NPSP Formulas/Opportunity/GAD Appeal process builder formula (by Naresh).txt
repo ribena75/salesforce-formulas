@@ -15,6 +15,12 @@ AND(
                    "CAF Voucher",1,
                    "CAF Card",1,
                    "CAF GAYE",1,
+				   "Benevity",1,
+				   "Radio 4",1,
+				   "Global Giving",1,
+				   "JustGiving",1,
+				   "Charitable Giving",1,
+				   "GoFundMe",1,
                     0
          ) = 0,
 
