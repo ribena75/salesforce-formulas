@@ -29,11 +29,11 @@ AND(
 
         OR(
               AND(
-                       [Opportunity].npsp__Primary_Contact__r.Has_Active_GAD__c = FALSE,
+                       [Opportunity].npsp__Primary_Contact__r.gaid__Has_Valid_GAD_Now__c = FALSE,
                        [Opportunity].IsRecurringDonation__c = FALSE
                ),
               AND(
-                       [Opportunity].npsp__Primary_Contact__r.Has_Active_GAD__c = FALSE,
+                       [Opportunity].npsp__Primary_Contact__r.gaid__Has_Valid_GAD_Now__c = FALSE,
                        NOT(ISBLANK( [Opportunity].npe03__Recurring_Donation__c)),
                        [Opportunity].IsRecurringDonation__c = TRUE,
                        [Opportunity].npe03__Recurring_Donation__r.npe03__Total_Paid_Installments__c = 0
