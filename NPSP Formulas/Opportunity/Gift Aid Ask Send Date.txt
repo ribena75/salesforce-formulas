@@ -1,7 +1,7 @@
 CASE(WEEKDAY(TODAY()),
 
-2, Today()+7, 
+2, Today()+5, 
 
-3, Today()+6, 
+3, Today()+4, 
 
-Today()+5)
+Today()+3)
