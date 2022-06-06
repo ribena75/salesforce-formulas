@@ -1,0 +1,7 @@
+IF(
+    AND(
+        ISPICKVAL(npe03__Recurring_Donation__c.npsp__RecurringType__c,"Monthly"),
+        TODAY() - npe03__Recurring_Donation__c.npe03__Last_Payment_Date__c > 30),
+    "Lapsed",
+    "Active"
+)
