@@ -1,7 +1,7 @@
 IF(
     AND(
         ISPICKVAL(npe03__Recurring_Donation__c.npe03__Installment_Period__c,"Monthly"),
-        TODAY() - npe03__Recurring_Donation__c.npe03__Last_Payment_Date__c > 30),
+        TODAY() - npe03__Recurring_Donation__c.npe03__Last_Payment_Date__c > 31),
     "Lapsed",
 IF(
     AND(
