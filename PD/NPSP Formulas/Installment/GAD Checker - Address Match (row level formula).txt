@@ -1,0 +1,1 @@
+IF(Contact.MailingStreet = gaid__Gift_Aid_Declaration__c.gaid__Housename_or_number__c,"TRUE","FALSE")
