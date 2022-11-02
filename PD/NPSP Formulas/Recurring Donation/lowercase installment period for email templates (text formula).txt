@@ -1,0 +1,1 @@
+lower(npe03__Installment_Period__c)
