@@ -1,1 +1,1 @@
-lower(npe03__Installment_Period__c)
+lower(TEXT(npe03__Installment_Period__c))
