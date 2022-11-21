@@ -1,1 +1,0 @@
-We will provide funding, collect and send information (in motion = via Signal and Teams) from local partners and save the information (at rest = on SharePoint)
