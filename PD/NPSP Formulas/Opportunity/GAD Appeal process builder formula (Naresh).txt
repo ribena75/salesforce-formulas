@@ -24,6 +24,7 @@ AND(
 				   "Charitable Giving",1,
 				   "GoFundMe",1,
 				   "Foundation Scotland",1,
+				   "Eventbrite",1,
                     0
          ) = 0,
 
