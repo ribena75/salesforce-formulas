@@ -1,1 +1,1 @@
-AND(NOT(ISBLANK(US_Development_Goals__c)),ISPICKVAL(CurrencyIsoCode, "USD"))
+AND((ISBLANK(US_Development_Goals__c)),ISPICKVAL(CurrencyIsoCode, "USD"))
