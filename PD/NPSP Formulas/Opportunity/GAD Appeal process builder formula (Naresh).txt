@@ -8,6 +8,7 @@ AND(
 		 NOT(ISBLANK([Opportunity].npsp__Primary_Contact__c)),
          [Opportunity].npsp__Primary_Contact__r.Not_eligible_for_Gift_Aid__c = FALSE,
          [Opportunity].npsp__Primary_Contact__r.npsp__Deceased__c = FALSE,
+		 [Opportunity].Fundraise_Up_Gift_Aid__c = FALSE,
          NOT(INCLUDES([Opportunity].npsp__Primary_Contact__r.Solicit_Codes__c   , "Do Not Contact")),
          NOT(INCLUDES([Opportunity].npsp__Primary_Contact__r.Global_Communication_Preferences__c , "Do Not Contact")),
 
