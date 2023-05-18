@@ -1,1 +1,1 @@
-gaid__Date_Made__c > DATE(YEAR(TODAY()) - 4, MONTH(TODAY()), DAY(TODAY()))
+gaid__Date_Made__c < DATE(YEAR(TODAY()) - 4, MONTH(TODAY()), DAY(TODAY()))
