@@ -1,1 +1,1 @@
-TEXT(YEAR( [npsp__Allocation__c].npsp__Opportunity__r.CloseDate ))
+TEXT(YEAR( {!$Record.Allocation_Date__c} ))
