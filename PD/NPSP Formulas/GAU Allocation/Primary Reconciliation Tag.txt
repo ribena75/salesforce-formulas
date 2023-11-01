@@ -40,4 +40,3 @@ npsp__Opportunity__r.npe03__Recurring_Donation__r.Annual_Value__c >= 5000,
 )
 )
 )
-TEST
