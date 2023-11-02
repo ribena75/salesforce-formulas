@@ -21,8 +21,6 @@ IF(
 "Major Donor Gift - Single",
 "n/a"
 )
-)
-)
  )
  ) ,
 IF(
@@ -43,8 +41,6 @@ AND(
 npsp__Opportunity__r.npe03__Recurring_Donation__r.Annual_Value__c > 0, 
 npsp__Opportunity__r.npsp__Primary_Contact__r.Major_Donor__c, 'True',
 "Major Donor Gift - Regular", "n/a"
-)
-)
 )
 )
 )
