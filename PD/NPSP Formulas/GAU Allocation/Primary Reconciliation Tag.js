@@ -7,7 +7,7 @@ IF(
 AND(
 npsp__Amount__c > 0,
 npsp__Amount__c < 500
-),"Small Gift - Single",
+),"Solidarity Gift - Single",
 IF(
 AND(
 npsp__Amount__c >= 500,
@@ -24,7 +24,7 @@ IF(
 AND(
 npsp__Opportunity__r.npe03__Recurring_Donation__r.Annual_Value__c > 0,
 npsp__Opportunity__r.npe03__Recurring_Donation__r.Annual_Value__c < 500
-),"Small Gift - Regular",
+),"Solidarity Gift - Regular",
 IF(
 AND(
 npsp__Opportunity__r.npe03__Recurring_Donation__r.Annual_Value__c >= 500,
