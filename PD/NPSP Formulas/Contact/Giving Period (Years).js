@@ -1,0 +1,1 @@
+(ABS(YEAR(npo02__LastCloseDate__c)-YEAR(npo02__FirstCloseDate__c))) + (DAY(npo02__LastCloseDate__c)/DAY(npo02__LastCloseDate__c))
