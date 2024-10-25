@@ -1,0 +1,1 @@
+LEFT(RIGHT(Fundraise_Up_Campaign_Name__c, LEN(Fundraise_Up_Campaign_Name__c) - FIND("[", Fundraise_Up_Campaign_Name__c)), FIND("]", RIGHT(Fundraise_Up_Campaign_Name__c, LEN(Fundraise_Up_Campaign_Name__c) - FIND("[", Fundraise_Up_Campaign_Name__c))) - 1)
