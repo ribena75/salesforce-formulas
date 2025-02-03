@@ -1,5 +1,5 @@
 IF( 
-  npsp__Opportunity__r.RecordType.DeveloperName = "Merchandise Sales",
+  npsp__Opportunity__r.RecordType.DeveloperName = "Merchandise_Sales",
   "IG-Merchandise",
 IF( 
     npsp__Opportunity__r.RecordType.DeveloperName = "Legacy_Gift", 
