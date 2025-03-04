@@ -1,0 +1,1 @@
+(npsp__EndDate__c - npe03__Date_Established__c) / 30
