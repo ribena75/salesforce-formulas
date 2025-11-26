@@ -1,1 +1,1 @@
-(gcga__Gift_Aid_Status__c = 'Potential' AND CurrencyIsoCode = 'GBP' AND CloseDate = LAST_N_YEARS:4) OR (CloseDate = THIS_YEAR)
+(gcga__Gift_Aid_Status__c = 'Potential' AND CurrencyIsoCode = 'GBP' AND (CloseDate = LAST_N_YEARS:4 OR CloseDate = THIS_YEAR))
