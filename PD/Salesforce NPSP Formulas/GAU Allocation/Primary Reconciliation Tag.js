@@ -1,8 +1,5 @@
-IF(
-  OR(
-    INCLUDES(npsp__Opportunity__r.Account.Constituent_Codes__c, "Corporate Donor"),
-    INCLUDES(npsp__Opportunity__r.Account.Constituent_Codes__c, "Corporate Relationship")
-  ),
+IF( 
+  Secondary_Reconciliation_Tag__c = "Corporate Donation",
   "Corporate Donation",
 IF( 
   npsp__Opportunity__r.RecordType.DeveloperName = "Merchandise_Sales",
