@@ -1,3 +1,6 @@
+IF(
+  INCLUDES(npsp__Opportunity__r.Account.Constituent_Codes__c, "Corporate"),
+  "Corporate Donation",
 IF( 
   npsp__Opportunity__r.RecordType.DeveloperName = "Merchandise_Sales",
   "IG-Merchandise",
@@ -75,4 +78,4 @@ IF(
       ) 
     ) 
   )
-)
+))
