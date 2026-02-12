@@ -1,0 +1,1 @@
+AMOUNT + Opportunity.gcga__Gift_Aid_Amount__c
