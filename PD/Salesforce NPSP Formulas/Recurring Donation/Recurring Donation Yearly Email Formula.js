@@ -1,1 +1,1 @@
-DAY(TODAY()) = 31 && MONTH(TODAY()) = 1 && YEAR(TODAY()) = 2027
+DAY(TODAY()) = 31 && MONTH(TODAY()) = 1
