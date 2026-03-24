@@ -3,7 +3,7 @@ IF(
     ISBLANK(Opportunity.UTM_Medium__c),
     NOT(ISBLANK(Opportunity.FundraiseUpId__c))
   ),
-  "attributed",
+  "unattributed",
   IF(
     ISBLANK(Opportunity.UTM_Medium__c),
     "",
