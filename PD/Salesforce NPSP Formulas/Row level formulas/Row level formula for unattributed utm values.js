@@ -6,7 +6,7 @@ IF(
   "attributed",
   IF(
     ISBLANK(Opportunity.UTM_Medium__c),
-    "unattributed",
+    "",
     Opportunity.UTM_Medium__c
   )
 )
