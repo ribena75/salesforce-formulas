@@ -1,1 +1,12 @@
-IF(ISBLANK(Opportunity.UTM_Medium__c), "unattributed", Opportunity.UTM_Medium__c)
+IF(
+  AND(
+    ISBLANK(Opportunity.UTM_Medium__c),
+    NOT(ISBLANK(Opportunity.FundraiseUpId__c))
+  ),
+  "attributed",
+  IF(
+    ISBLANK(Opportunity.UTM_Medium__c),
+    "unattributed",
+    Opportunity.UTM_Medium__c
+  )
+)
