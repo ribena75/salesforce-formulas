@@ -44,7 +44,8 @@ IF(
               IF( 
                 AND( 
                   npsp__Amount__c >= 500, 
-                  npsp__Amount__c < 5000 
+                  npsp__Amount__c < 5000,
+                  npsp__Opportunity__r.npsp__Primary_Contact__r.Major_Donor__c = false 
                 ), 
                 "Medium Gift - Single", 
                 IF(
@@ -66,7 +67,8 @@ IF(
               IF( 
                 AND( 
                   npsp__Opportunity__r.npe03__Recurring_Donation__r.Annual_Value__c >= 500, 
-                  npsp__Opportunity__r.npe03__Recurring_Donation__r.Annual_Value__c < 5000 
+                  npsp__Opportunity__r.npe03__Recurring_Donation__r.Annual_Value__c < 5000,
+                  npsp__Opportunity__r.npsp__Primary_Contact__r.Major_Donor__c = false 
                 ), 
                 "Medium Gift - Regular", 
                 IF(
