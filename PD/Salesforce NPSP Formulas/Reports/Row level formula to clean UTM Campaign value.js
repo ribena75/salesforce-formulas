@@ -1,6 +1,9 @@
-=IFERROR(
-  IF(LEN(LEFT(J2,FIND("-",J2)-1))>=8,
-     MID(J2,FIND("-",J2)+1,999),
-     J2),
-  J2
+IF(
+  ISERROR(FIND("-", UTM_Campaign__c)),
+  UTM_Campaign__c,
+  IF(
+    LEN(LEFT(UTM_Campaign__c, FIND("-", UTM_Campaign__c) - 1)) >= 8,
+    MID(UTM_Campaign__c, FIND("-", UTM_Campaign__c) + 1, 999),
+    UTM_Campaign__c
+  )
 )
