@@ -1,3 +1,5 @@
+//Managed formula - cannot be updated//
+
 IF(npe01__Organization_Type__c == 'Household Account',
 
 Account.BillingStreet & BR() &
