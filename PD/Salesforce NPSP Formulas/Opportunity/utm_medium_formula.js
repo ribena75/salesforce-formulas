@@ -1,7 +1,7 @@
 IF(
   RecordType.Name = "Merchandise_Sales", "merch",
   CASE(
-    UTM_Source__c,
+    UTM_Medium__c,
     "cpc", "grant",
     "email", "email",
     "paid", "ads",
