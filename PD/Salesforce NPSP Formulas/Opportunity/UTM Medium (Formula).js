@@ -1,15 +1,15 @@
 IF(
-  RecordType.Name = "Merchandise Sales", "merch",
+  RecordType.Name = "Merchandise Sales", "Merch",
   IF(
     ISBLANK(UTM_Medium__c),
-    "untracked",
+    "Untracked",
     CASE(
       UTM_Medium__c,
-      "cpc", "grant",
-      "email", "email",
-      "paid", "ads",
-      "paid-social", "ads",
-      "untracked"
+      "cpc", "Grant",
+      "email", "Email",
+      "paid", "Ads",
+      "paid-social", "Ads",
+      "Untracked"
     )
   )
 )
