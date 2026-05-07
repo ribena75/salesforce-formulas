@@ -22,6 +22,6 @@ IF(
     "Ukraine1", "Social",
     "Ukraine2", "Social",
     "website", "Organic",
-    "untracked"
+    "Untracked"
   )
 )

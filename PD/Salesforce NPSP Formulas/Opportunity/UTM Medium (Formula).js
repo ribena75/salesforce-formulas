@@ -5,10 +5,10 @@ IF(
     "Untracked",
     CASE(
       UTM_Medium__c,
-      "cpc", "Grant",
+      "cpc", "Google",
       "email", "Email",
-      "paid", "Ads",
-      "paid-social", "Ads",
+      "paid", "Meta",
+      "paid-social", "Meta",
       "Untracked"
     )
   )
