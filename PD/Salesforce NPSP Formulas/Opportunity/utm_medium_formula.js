@@ -1,5 +1,5 @@
 IF(
-  RecordType.Name = "Merchandise_Sales", "merch",
+  RecordType.Name = "Merchandise Sales", "merch",
   CASE(
     UTM_Medium__c,
     "cpc", "grant",
