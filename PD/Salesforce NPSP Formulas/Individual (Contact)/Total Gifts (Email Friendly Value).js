@@ -1,7 +1,7 @@
-SUBSTITUTE(
-  SUBSTITUTE(
-    TEXT(npo02__TotalOppAmount__c),
-    "GBP", "£"
-  ),
-  "USD", "$"
-)
+CASE(
+  CurrencyIsoCode,
+  "GBP", "£",
+  "USD", "$",
+  ""
+) &
+TEXT(npo02__TotalOppAmount__c)
