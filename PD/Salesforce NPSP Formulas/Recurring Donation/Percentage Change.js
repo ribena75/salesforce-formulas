@@ -1,0 +1,1 @@
+((npe03__Amount__c - Previous_Amount__c) / Previous_Amount__c)
