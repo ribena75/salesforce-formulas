@@ -13,6 +13,7 @@ ISPICKVAL(Payment_Method__c, 'Standing Order'),
 ISPICKVAL(Payment_Method__c, 'Stripe'),
 ISPICKVAL(Payment_Method__c, 'Stripe Direct Debit'),
 ISPICKVAL(Payment_Method__c, 'Rapidata'),
+ISPICKVAL(Payment_Method__c, 'Radio 4'),
 ISPICKVAL(Payment_Method__c, 'iATS - Offline'),
 ISPICKVAL(Payment_Method__c, 'Stewardship')
 )
