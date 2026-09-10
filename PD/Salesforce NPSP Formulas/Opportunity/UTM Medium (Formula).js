@@ -9,7 +9,7 @@ IF(
       "email", "Email",
       "paid", "Meta",
       "paid-social", "Meta",
-      "Other"
+      "Website"
     )
   )
 )
