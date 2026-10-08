@@ -1,0 +1,1 @@
+IF(CONTAINS(npsp__Allocation__c.Appeal__c.Name, "Major"), "Major Giving", "Regular/small gifts")
